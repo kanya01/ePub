@@ -1,0 +1,14 @@
+<div class="grid gap-6 lg:grid-cols-3">
+  <% @publications.each do |publication| %>
+    <%= content_tag :div,
+                    nil,
+                    data: {
+                      react_component: "PublicationCard",
+                      react_props: {
+                        title: publication.title,
+                        excerpt: publication.excerpt,
+                        category: publication.category
+                      }.to_json
+                    } %>
+  <% end %>
+</div>

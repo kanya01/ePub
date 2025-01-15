@@ -1,0 +1,141 @@
+<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+  <%# Hero Section %>
+  <div class="relative overflow-hidden bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+        <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:mt-16 lg:px-8 xl:mt-20">
+          <div class="sm:text-center lg:text-left">
+            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <span class="block">Economic Publications</span>
+              <span class="block text-blue-600 mt-2">Simplified for Everyone</span>
+            </h1>
+            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              Discover economic insights with AI-powered summaries. From complex research to accessible understanding.
+            </p>
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div class="rounded-md shadow">
+                <%= link_to publications_path, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10" do %>
+                  Browse Publications
+                  <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                <% end %>
+              </div>
+              <% unless user_signed_in? %>
+                <div class="mt-3 sm:mt-0 sm:ml-3">
+                  <%= link_to "Sign Up", new_user_registration_path, class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-blue-50 hover:bg-blue-100 md:py-4 md:text-lg md:px-10" %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <%# Features Section %>
+  <div class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Features</h2>
+        <p class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          Better way to understand economics
+        </p>
+      </div>
+
+      <div class="mt-12">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <%# AI Summaries Feature %>
+          <div class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-500 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200">
+            <div>
+              <span class="rounded-lg inline-flex p-3 bg-blue-50 text-blue-700 ring-4 ring-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-lg font-medium text-gray-900">
+                AI-Powered Summaries
+              </h3>
+              <p class="mt-2 text-sm text-gray-500">
+                Complex economic papers simplified into clear, concise summaries using advanced AI technology.
+              </p>
+            </div>
+          </div>
+
+          <%# Expert Authors Feature %>
+          <div class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-500 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200">
+            <div>
+              <span class="rounded-lg inline-flex p-3 bg-blue-50 text-blue-700 ring-4 ring-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-lg font-medium text-gray-900">
+                Expert Authors
+              </h3>
+              <p class="mt-2 text-sm text-gray-500">
+                Publications from leading economists, researchers, and industry experts.
+              </p>
+            </div>
+          </div>
+
+          <%# Latest Research Feature %>
+          <div class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-500 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200">
+            <div>
+              <span class="rounded-lg inline-flex p-3 bg-blue-50 text-blue-700 ring-4 ring-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </span>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-lg font-medium text-gray-900">
+                Latest Research
+              </h3>
+              <p class="mt-2 text-sm text-gray-500">
+                Stay updated with the newest economic research and analysis from around the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%# Latest Publications Section %>
+  <div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
+        Latest Publications
+      </h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <% @publications&.each do |publication| %>
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-sm font-medium text-blue-600">
+                  <%= publication.category %>
+                </p>
+                <div class="mt-2">
+                  <h3 class="text-xl font-semibold text-gray-900">
+                    <%= publication.title %>
+                  </h3>
+                  <p class="mt-3 text-base text-gray-500">
+                    <%= truncate(publication.summary, length: 150) %>
+                  </p>
+                </div>
+              </div>
+              <div class="mt-6">
+                <%= link_to "Read More →", publication_path(publication), class: "text-base font-semibold text-blue-600 hover:text-blue-500" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
