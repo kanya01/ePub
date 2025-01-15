@@ -21,7 +21,7 @@ gem "cssbundling-rails"
 gem "jbuilder"
 
 gem "tailwindcss-rails"
-
+gem 'vcr'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 gem "redis", ">= 4.0.1"
@@ -32,6 +32,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
+gem 'ruby-openai'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -88,4 +89,5 @@ group :test do
   gem "selenium-webdriver"
   gem "simplecov", require: false
   gem "shoulda-matchers"
+  gem 'webmock'
 end

@@ -1,4 +1,16 @@
-<div>
-  <h1 class="font-bold text-4xl">Publications#show</h1>
-  <p>Find me in app/views/publications/show.html.erb</p>
-</div>
+<%= content_tag :div,
+                nil,
+                data: {
+                  react_component: "PublicationSummary",
+                  react_props: {
+                    publication: {
+                      title: @publication.title,
+                      author: @publication.author.full_name,
+                      summary: @publication.ai_summary,
+                      keywords: @publication.keywords,
+                      readabilityScore: @publication.readability_score,
+                      originalLength: @publication.word_count,
+                      summaryLength: @publication.summary_word_count
+                    }
+                  }.to_json
+                } %>

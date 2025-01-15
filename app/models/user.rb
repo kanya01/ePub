@@ -53,6 +53,17 @@ class User < ApplicationRecord
     role == ADMIN
   end
 
+  def self.find_or_create_ai_author
+    find_or_create_by!(username: 'ai_author') do |user|
+      user.email = 'ai@publications.com'
+      user.first_name = 'AI'
+      user.last_name = 'Author'
+      user.role = AUTHOR
+      user.password = SecureRandom.hex(32)
+      user.ai_bot = true
+    end
+
+    end
   private
 
   def set_default_role

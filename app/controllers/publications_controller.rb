@@ -1,7 +1,15 @@
 class PublicationsController < ApplicationController
   before_action :set_publication, only: %i[show edit update destroy]
   def index
-    @publications = Publication.all
+    # @publications = Publication.latest
+    # @publications = @publications.ai_generated if params[:ai_generated]
+    #
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @publications.as_json(include: [:author, :sources]) }
+    # end
+
+    @publications = Publication.includes(:author).order(created_at: :desc)
   end
 
   def show
